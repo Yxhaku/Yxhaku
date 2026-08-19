@@ -1,5 +1,9 @@
-<svg viewBox="0 0 900 270" width="100%" height="270" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <clipPath id="bounds-clip">
+      <rect width="900" height="260" />
+    </clipPath>
+
     <pattern id="dots-green" width="4.0" height="4.0" patternUnits="userSpaceOnUse">
       <rect width="1.4" height="1.4" rx="0.3" fill="#00FF66" opacity="0.45" />
     </pattern>
@@ -9,39 +13,39 @@
     </pattern>
 
     <radialGradient id="radial-fade" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85" />
-      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.4" />
-      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.08" />
-      <stop offset="85%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="70%" stop-color="#000000" stop-opacity="0" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
     <mask id="mask-left">
-      <circle cx="390" cy="135" r="130" fill="url(#radial-fade)" />
+      <circle cx="390" cy="130" r="105" fill="url(#radial-fade)" />
     </mask>
 
     <mask id="mask-right">
-      <circle cx="510" cy="135" r="130" fill="url(#radial-fade)" />
+      <circle cx="510" cy="130" r="105" fill="url(#radial-fade)" />
     </mask>
 
-    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="30" />
+    <filter id="soft-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22" />
     </filter>
 
     <style>
       @keyframes active-drift-1 {
         0% { transform: translate(0px, 0px) scale(1); }
-        25% { transform: translate(16px, -10px) scale(1.04); }
-        50% { transform: translate(-12px, 12px) scale(0.96); }
-        75% { transform: translate(10px, 8px) scale(1.02); }
+        25% { transform: translate(14px, -8px) scale(1.03); }
+        50% { transform: translate(-10px, 10px) scale(0.97); }
+        75% { transform: translate(8px, 6px) scale(1.02); }
         100% { transform: translate(0px, 0px) scale(1); }
       }
 
       @keyframes active-drift-2 {
         0% { transform: translate(0px, 0px) scale(1); }
-        25% { transform: translate(-16px, 10px) scale(0.96); }
-        50% { transform: translate(14px, -14px) scale(1.04); }
-        75% { transform: translate(-10px, -6px) scale(1.01); }
+        25% { transform: translate(-14px, 8px) scale(0.97); }
+        50% { transform: translate(12px, -10px) scale(1.03); }
+        75% { transform: translate(-8px, -5px) scale(1.01); }
         100% { transform: translate(0px, 0px) scale(1); }
       }
 
@@ -52,12 +56,12 @@
 
       .orb-1 {
         animation: active-drift-1 7.5s ease-in-out infinite;
-        transform-origin: 390px 135px;
+        transform-origin: 390px 130px;
       }
 
       .orb-2 {
         animation: active-drift-2 8.5s ease-in-out infinite;
-        transform-origin: 510px 135px;
+        transform-origin: 510px 130px;
       }
 
       .cursor {
@@ -82,23 +86,24 @@
     </style>
   </defs>
 
-  <!-- Full 270px background -->
-  <rect width="900" height="270" fill="rgb(13, 17, 23)" />
+  <rect width="900" height="260" fill="rgb(13, 17, 23)" />
 
-  <g style="mix-blend-mode: screen;">
-    <g class="orb-1">
-      <circle cx="390" cy="135" r="95" fill="#00FF66" opacity="0.14" filter="url(#soft-glow)" />
-      <circle cx="390" cy="135" r="130" fill="url(#dots-green)" mask="url(#mask-left)" />
+  <g clip-path="url(#bounds-clip)">
+    <g style="mix-blend-mode: screen;">
+      <g class="orb-1">
+        <circle cx="390" cy="130" r="70" fill="#00FF66" opacity="0.16" filter="url(#soft-glow)" />
+        <circle cx="390" cy="130" r="105" fill="url(#dots-green)" mask="url(#mask-left)" />
+      </g>
+
+      <g class="orb-2">
+        <circle cx="510" cy="130" r="70" fill="#00E5FF" opacity="0.16" filter="url(#soft-glow)" />
+        <circle cx="510" cy="130" r="105" fill="url(#dots-cyan)" mask="url(#mask-right)" />
+      </g>
     </g>
 
-    <g class="orb-2">
-      <circle cx="510" cy="135" r="95" fill="#00E5FF" opacity="0.14" filter="url(#soft-glow)" />
-      <circle cx="510" cy="135" r="130" fill="url(#dots-cyan)" mask="url(#mask-right)" />
+    <g text-anchor="middle">
+      <text x="450" y="124" class="title">KIRILL KOPKIN</text>
+      <text x="450" y="162" class="subtitle">&gt; systems // zero-knowledge // cloud<tspan class="cursor" fill="#00FF66">_</tspan></text>
     </g>
-  </g>
-
-  <g text-anchor="middle">
-    <text x="450" y="129" class="title">KIRILL KOPKIN</text>
-    <text x="450" y="167" class="subtitle">&gt; systems // zero-knowledge // cloud<tspan class="cursor" fill="#00FF66">_</tspan></text>
   </g>
 </svg>
