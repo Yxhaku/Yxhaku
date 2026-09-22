@@ -6,10 +6,6 @@
   <img src="./assets/banner.svg" width="100%" alt="Kazuki Kosaka" />
 </div>
 
-<div align="center">
-  <div align="center">
-    <img src="https://readme-typing-svg.demolab.com/?font=Rubik+Pixels&size=38&pause=2000&color=00FF41&center=true&vCenter=true&width=900&height=80&lines=>_+Good+morning+New+Yorkers" alt="Cyberpunk Particle Greeting" />
-  </div>
   <h3> Systems & Product Engineer | Builder</h3>
   <p>
     Building end-to-end products at the intersection of <b>high-performance systems</b>, <b>applied cryptography</b>, and <b>modern cloud architectures</b>.<br/>
