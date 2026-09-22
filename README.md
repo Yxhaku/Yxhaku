@@ -6,6 +6,7 @@
   <img src="./assets/banner.svg" width="100%" alt="Kazuki Kosaka" />
 </div>
 
+<div align="center">
   <h3> Systems & Product Engineer | Builder</h3>
   <p>
     Building end-to-end products at the intersection of <b>high-performance systems</b>, <b>applied cryptography</b>, and <b>modern cloud architectures</b>.<br/>
